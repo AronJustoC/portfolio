@@ -4,7 +4,7 @@
   /* Colores base */
   --primary-color: #f1f5f9; / * Azul pastel */
   --secondary-color-dark: #94a3b8; /* Azul ligeramente más oscuro */
-  --secondary-color: #508fcb; /* Azul medio */
+  --secondary-color: #000000; /* Azul medio */
   
   /* Tema oscuro */
   --background-dark: #1e293b; /* Negro suave */
@@ -14,12 +14,12 @@
   /* Tema claro */
   --background-light: #d1d5db; /* Gris plomo claro */
   --text-light: #374151; /* Gris oscuro para texto */
-  --accent-light: #60a5fa; /* Azul más vibrante */
+  --accent-light: #e7612e; /* Azul más vibrante */
   
   /* Otros colores */
   --extra-light: #f1f5f9; /* Muy claro para fondos secundarios */
   --border-color: #94a3b8; /* Gris neutral para bordes */
-  --hover-color: #93c5fd; /* Azul para estados hover */
+  --hover-color: #e7612e; /* Azul para estados hover */
 
   /* Ancho máximo */
   --max-width: 1200px;
@@ -51,23 +51,27 @@ nav {
 .nav-container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+
 nav .logo a {
+  display: inline-block; /* Permite que las transformaciones se apliquen */
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--primary-color);
-  transition: color 0.3s;
   text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease; /* Añade una transición suave */
 }
 
 nav .logo a:hover {
   color: var(--hover-color);
+  transform: scale(1.1);
 }
+
 
 nav .checkbox {
   display: none;
@@ -86,7 +90,7 @@ nav .checkbox i {
 ul {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   list-style: none;
   transition: left 0.3s;
 }
@@ -95,11 +99,11 @@ ul li a {
   text-decoration: none;
   color: var(--text-dark);
   transition: 0.3s;
-  padding: 0.5rem;
+  padding: 0.1rem 0.1rem;
 }
 
 ul li a:hover {
-  color: var(--hover-color);
+border-bottom: 3px solid;
 }
 
 .section {
@@ -170,17 +174,85 @@ ul li a:hover {
 }
 
 .hire-me:hover {
-
+  background-color: var(--hover-color);
+  color: var(--secondary-color);
 }
 
 .cv {
-  background-color: var(--primary-color);
-  color: var(--text-light);
+  background-color: var(--accent-light);
+  color: var(--secondary-color);
   font-weight: 600;
 }
 
 .cv:hover {
   background-color: var(--text-light);
   color: var(--primary-color);
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+.icons a {
+  text-decoration: none;
+}
+
+
+/* Icono de GitHub */
+.fa-github {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #f5f5f5; /* Color claro para buen contraste */
+  margin-right: 1rem;
+}
+
+.fa-github:hover {
+  color: #e0e0e0; /* Color ligeramente más oscuro para el hover */
+  transform: scale(1.1);
+}
+
+/* Icono de LinkedIn */
+.fa-linkedin {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #00a0dc; /* Azul claro para buen contraste */
+  margin-right: 1rem;
+}
+
+.fa-linkedin:hover {
+  color: #0084b4; /* Azul ligeramente más oscuro para el hover */
+  transform: scale(1.1);
+}
+
+/* Icono de Instagram */
+.fa-instagram {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #e95950; /* Rojo anaranjado para buen contraste */
+  margin-right: 1rem;
+}
+
+.fa-instagram:hover {
+  color: #d7443f; /* Tono más oscuro para el hover */
+  transform: scale(1.1);
+}
+
+/* Icono de YouTube */
+.fa-youtube {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #ff0000; /* Rojo brillante para buen contraste */
+  margin-right: 1rem;
+}
+
+.fa-youtube:hover {
+  color: #cc0000; /* Rojo más oscuro para el hover */
+  transform: scale(1.1);
 }
 
