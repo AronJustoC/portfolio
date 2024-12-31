@@ -2,7 +2,7 @@
 
 :root {
   /* Colores base */
-  --primary-color: #f1f5f9; / * Azul pastel */
+  --primary-color: #e7612e ; / * Azul pastel */
   --secondary-color-dark: #94a3b8; /* Azul ligeramente más oscuro */
   --secondary-color: #000000; /* Azul medio */
   
@@ -19,10 +19,10 @@
   /* Otros colores */
   --extra-light: #f1f5f9; /* Muy claro para fondos secundarios */
   --border-color: #94a3b8; /* Gris neutral para bordes */
-  --hover-color: #e7612e; /* Azul para estados hover */
+  --hover-color: #f1f5f9; /* Azul para estados hover */
 
   /* Ancho máximo */
-  --max-width: 1200px;
+  --max-width: 1000px;
 }
 
 * {
@@ -97,13 +97,15 @@ ul {
 
 ul li a {
   text-decoration: none;
-  color: var(--text-dark);
+  font-weight: 600;
+  color: var(--primary-color);
   transition: 0.3s;
   padding: 0.1rem 0.1rem;
 }
 
 ul li a:hover {
 border-bottom: 3px solid;
+color: var(--hover-color);
 }
 
 .section {
@@ -113,10 +115,10 @@ border-bottom: 3px solid;
   min-height: 100vh;
   max-width: var(--max-width);
   margin: auto;
-  padding: 1rem;
+  padding: 0.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
+  gap: 0.5rem;
 }
 
 .content {
@@ -145,6 +147,7 @@ border-bottom: 3px solid;
 }
 
 .description {
+  font-weight: 500;
   line-height: 1.5rem;
   color: var(--text-light);
   margin-bottom: 2rem;
@@ -156,8 +159,9 @@ border-bottom: 3px solid;
 }
 
 .actions-buttons button {
-  font-size: 1rem;
-  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
   letter-spacing: 2px;
   padding: 1rem 2rem;
   outline: none;
@@ -174,7 +178,7 @@ border-bottom: 3px solid;
 }
 
 .hire-me:hover {
-  background-color: var(--hover-color);
+  background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
@@ -195,8 +199,8 @@ border-bottom: 3px solid;
 }
 
 .image img {
-  width: min(25rem, 90%);
-  border-radius: 100%;
+  width: min(18rem, 90%);
+  border-radius: 80%;
 }
 
 .icons a {
